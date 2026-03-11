@@ -3,7 +3,7 @@ FROM php:8.3-cli
 WORKDIR /app
 
 # Install PHP extensions and system dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update -y && apt-get install -y --no-install-recommends \
     git \
     unzip \
     libzip-dev \
